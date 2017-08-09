@@ -21,16 +21,18 @@ function makeBoxes (howMany) {
     myElement.style = 'background-color:' + colors[currColor];
     myNode.appendChild(myElement);
 
-    myNode.addEventListener('click', function(e) {
-      e.target.parentNode.removeChild(e.target);
-    }, false);
-
     if (currColor === colorAmt-1) {
       currColor = 0;
     } else {
       currColor++;
     }
   }
+
+  myNode.addEventListener('click', function(e) {
+    e.target.parentNode.removeChild(e.target);
+  }, false);
+
+  
 }
 
 
